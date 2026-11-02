@@ -1,0 +1,90 @@
+---
+
+---
+
+<div id="conteiner">
+    <main>
+        <img src="/logo.png" class="logo" alt="Logo de Chuzito Café"/>
+        <p>Un legado del cielo</p>
+        <button class="cta-button">
+            <a href="#menu">DESCUBRE NUESTRO CAFÉ</a>
+        </button>
+    </main>
+
+</div>
+
+<style>
+    #conteiner{
+        font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+        height: 100%;
+    }
+
+    main{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #452E1E;
+    }
+    .logo{
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        animation: slideUp 1s ease-in-out both;
+    }
+    p{
+        color: #d8d5ba;
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 1rem;
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+        animation: slideUp 1.5s ease-in-out both;
+    }
+
+    #nosotros{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #F5F5F5;
+    }
+
+    .cta-button{
+        display: block;
+        margin: 2rem auto;
+        padding: 1rem 2rem;
+        border: 1px solid #D7A66D;
+        background-color: #452E1E;
+        font-size: 1.2rem;
+        cursor: pointer;
+        animation: slideUp 1.5s ease-in-out both;
+    }
+    .cta-button:hover{
+        transition: all 0.3s ease-in-out;
+        background-color: #D7A66D;
+    }
+
+    .cta-button a{
+        color: #D7A66D;
+        text-decoration: none;
+    }
+    .cta-button:hover a{
+        transition: all 0.3s ease-in-out;
+        color: #452E1E;
+    }
+
+     @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+</style>

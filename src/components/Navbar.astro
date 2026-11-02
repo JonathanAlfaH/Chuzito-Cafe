@@ -1,0 +1,174 @@
+
+---
+---
+
+<header class="header">
+    <nav class="navbar">
+        <a href="/" class="logo" aria-label="Inicio">
+            <img src="/logo.png" alt="Logo" />
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#inicio" class="active">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#menu">Menú</a></li>
+        </ul>
+
+        <a href="#contacto" class="contact-button">
+            Contáctanos
+            <span>↗</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+</header>
+
+<style>
+    .header {
+        width: 100%;
+        background: #452E1E;
+        font-family: Inter, Roboto, Arial, sans-serif;
+        position: fixed;
+        top: 0;
+        animation: slideDown 0.5s ease-in-out both;
+    }
+
+    .navbar {
+        width: min(100% - 80px, 1400px);
+        min-height: 90px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .logo img {
+        width: 110px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 42px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-links a {
+        position: relative;
+        display: inline-block;
+        padding: 8px 0;
+        color: #F5EDE5;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color .25s ease;
+    }
+
+    .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        border-radius: 10px;
+        background: #D7A66D;
+        transition: width .25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: #DDB786;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+        width: 100%;
+    }
+
+    .contact-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        padding: 13px 20px;
+        border: 1px solid rgba(255,255,255,.4);
+        border-radius: 50px;
+        color: #452E1E;
+        background: #F0DFCA;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+        transition: all .25s ease;
+    }
+
+    .contact-button:hover {
+        background: #DDB786;
+        transform: translateY(-2px);
+    }
+
+    .contact-button span {
+        font-size: 17px;
+    }
+
+    .menu-toggle {
+        display: none;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        margin: 6px;
+        background: white;
+    }
+
+    @media (max-width: 768px) {
+        .navbar {
+            width: calc(100% - 40px);
+            min-height: 75px;
+        }
+
+        .logo img {
+            width: 90px;
+        }
+
+        .nav-links,
+        .contact-button {
+            display: none;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
